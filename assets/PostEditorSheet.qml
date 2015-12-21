@@ -218,39 +218,6 @@ CutePressSheet {
                             mainWindow.openImageSelector(iSheet, bodyInput.editor.cursorPosition)
                         }
                     }
-                    //                ScrollView {
-                    //                    horizontalAlignment: HorizontalAlignment.Fill
-                    //                    verticalAlignment: VerticalAlignment.Fill
-                    //                    scrollViewProperties {
-                    //                        scrollMode: ScrollMode.Horizontal
-                    //                    }
-                    //                    content: Container {
-                    //                        layout: StackLayout {
-                    //                            orientation: LayoutOrientation.LeftToRight
-                    //                        }
-                    //                        Button {
-                    //                            text: "Insert Img"
-                    //                            onClicked: {
-                    //                                mainWindow.openImageSelector(iSheet, bodyInput.editor.cursorPosition)
-                    //                            }
-                    //                        }
-                    //                        
-                    //                        Button {
-                    //                            text: "b"
-                    //                            onClicked: {
-                    //                                console.log("Abhishaidh",bodyInput.editor.selectedText)
-                    //                                bodyInput.text = bodyInput.text.replace(bodyInput.selectedText, "<b>"+bodyInput.selectedText+"</b>")
-                    //                            }
-                    //                        }
-                    //                        
-                    //                        Button {
-                    //                            text: "b"
-                    //                            onClicked: {
-                    //                                bodyInput.text = bodyInput.text.replace(bodyInput.selectedText, "<b>"+bodyInput.selectedText+"</b>")
-                    //                            }
-                    //                        }                        
-                    //                    }
-                    //                }
                 }
             }
             ScrollView {
@@ -324,24 +291,6 @@ CutePressSheet {
                     SmallHeadingText {
                         text: qsTr("Categories")
                     }
-                    
-//                    Container {                        
-//                        horizontalAlignment: HorizontalAlignment.Fill
-//                        layout: DockLayout {}
-//                        SmallHeadingText {
-//                            text: qsTr("Categories")
-//                        }
-//                        ImageButton {
-//                            horizontalAlignment: HorizontalAlignment.Right
-//                            defaultImageSource: "asset:///images/add-small.png"
-//                            onClicked: {
-//                                cpUtil.markCategoriesInModel(categoriesInput.text)
-//                                var catSheet = categoriesSelectionSheetDefinition.createObject(mainWindow.top())
-//                                catSheet.caller = iSheet
-//                                catSheet.open()
-//                            }
-//                        }
-//                    }
                     
                     Container {
                         horizontalAlignment: HorizontalAlignment.Fill

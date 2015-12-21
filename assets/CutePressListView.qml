@@ -33,11 +33,9 @@ ListView {
         appUtil.copyTextToClipboard(iText);
     }
     function openEditPostEditor(iCurrentItem) {
-        console.log("Abhish3k")
         mainWindow.openEditPostEditor(iCurrentItem)
     }
     function openEditPageEditor(iCurrentItem) {
-        console.log("Abhish3k")
         mainWindow.openEditPageEditor(iCurrentItem)
     }
     function deletePost(iPost) {

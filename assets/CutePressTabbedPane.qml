@@ -116,7 +116,6 @@ TabbedPane {
         nSheet.isEditing = true
         nSheet.titleText = iCurrentItem.postTitle
         nSheet.bodyText = iCurrentItem.postDescription
-        console.log("Dabba", iCurrentItem.postDisplayStatus)
         if(iCurrentItem.postPublishStatus=="private")
             nSheet.statusIndex = 1
         else if(iCurrentItem.postPublishStatus=="draft")
@@ -180,7 +179,6 @@ TabbedPane {
         nSheet.isEditing = true
         nSheet.titleText = iCurrentItem.pageTitle
         nSheet.bodyText = iCurrentItem.pageDescription
-        console.log("Dabba",iCurrentItem.pagePublishStatus)
         if(iCurrentItem.pagePublishStatus=="private")
             nSheet.statusIndex = 1
         else if(iCurrentItem.pagePublishStatus=="draft")
