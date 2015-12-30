@@ -68,58 +68,6 @@ CutePressTabbedPane {
             id: appUtil
         }
 	]
-//	Page {
-//	    Container {
-//	        //Todo: fill me with QML
-//	        layout: StackLayout {
-//	            
-//	        }
-//	        Label {
-//	            // Localized text with the dynamic translation and locale updates support
-//	            text: qsTr("Hello World") + Retranslate.onLocaleOrLanguageChanged
-//	            textStyle.base: SystemDefaults.TextStyles.BigText
-//	        }
-//	        
-//	        TextField {
-//	            id: blogAddressInput
-//	            text: "http://theshowstopper.in/"
-//	        }
-//	        
-//	        TextField {
-//	            id: blogUsernameInput
-//	            text: "admin"
-//	        }
-//	        
-//	        TextField {
-//	            id: blogPasswordInput
-//	            text: "kumar_22"    
-//	            inputMode: TextFieldInputMode.Password        
-//	        }
-//	        Button {
-//	            text: "Sign in"
-//	            onClicked: {
-//	                cpManager.blogUrl = blogAddressInput.text
-//	                cpManager.blogUsername = blogUsernameInput.text
-//	                cpManager.blogPassword = blogPasswordInput.text
-//	                cpUtil.getBlogs()
-//	            }
-//            }
-//            Button {
-//                text: "New Blog"
-//                onClicked: {
-//                    var nSheet = newBlogSheetDefinition.createObject()
-//                    nSheet.open()
-//                }
-//            }
-//            Button {
-//                text: "Sign in"
-//                onClicked: {
-//                    var nPage = debugPageDefinition.createObject()
-//                    mainWindow.push(nPage)
-//                }
-//            }
-//	    }
-//	}
     
     Menu.definition: MenuDefinition {
         // Specify the actions that should be included in the menu
