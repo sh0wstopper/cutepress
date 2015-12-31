@@ -32,6 +32,20 @@ ListView {
     function copyToClipboard(iText) {
         appUtil.copyTextToClipboard(iText);
     }
+    
+    function openBlogEditorSheet(blogIsWordPress,
+                                blogUrl,
+                                blogUsername,
+                                blogPassword,
+                                blogHtUsername,
+                                blogHtPassword) {       
+        mainWindow.openBlogEditorSheet(blogIsWordPress,
+                                 blogUrl,
+                                 blogUsername,
+                                 blogPassword,
+                                 blogHtUsername,
+                                 blogHtPassword);
+    }
     function openEditPostEditor(iCurrentItem) {
         mainWindow.openEditPostEditor(iCurrentItem)
     }

@@ -244,7 +244,23 @@ TabbedPane {
     }
     
     function openNewBlogSheet() {       
-        var nSheet = newBlogSheetDefinition.createObject(root.top())
+        var nSheet = blogEditorSheetDefinition.createObject(root.top())
+        nSheet.open()
+    }
+    
+    function openBlogEditorSheet(blogIsWordPress,
+                                blogUrl,
+                                blogUsername,
+                                blogPassword,
+                                blogHtUsername,
+                                blogHtPassword) {       
+        var nSheet = blogEditorSheetDefinition.createObject(root.top());
+        nSheet.setEditDetails(blogIsWordPress,
+                                blogUrl,
+                                blogUsername,
+                                blogPassword,
+                                blogHtUsername,
+                                blogHtPassword);
         nSheet.open()
     }
     
@@ -309,8 +325,8 @@ TabbedPane {
             source: "TagsPage.qml" 
         },
         ComponentDefinition {
-            id: newBlogSheetDefinition
-            source: "NewBlogSheet.qml" 
+            id: blogEditorSheetDefinition
+            source: "BlogEditorSheet.qml" 
         },
         SystemDialog {
             id: queryDialog

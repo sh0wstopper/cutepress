@@ -40,6 +40,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/ActivityIndicatorLarge.qml) \
         $$quote($$BASEDIR/assets/ActivityIndicatorMedium.qml) \
         $$quote($$BASEDIR/assets/ActivityIndicatorSmall.qml) \
+        $$quote($$BASEDIR/assets/BlogEditorSheet.qml) \
         $$quote($$BASEDIR/assets/BlogListsTab.qml) \
         $$quote($$BASEDIR/assets/BlogsSelectionSheet.qml) \
         $$quote($$BASEDIR/assets/ButtonTitleBar.qml) \
@@ -58,7 +59,6 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/ImageSelectionSheet.qml) \
         $$quote($$BASEDIR/assets/MediaEditorSheet.qml) \
         $$quote($$BASEDIR/assets/MediaTab.qml) \
-        $$quote($$BASEDIR/assets/NewBlogSheet.qml) \
         $$quote($$BASEDIR/assets/PageCategoriesListView.qml) \
         $$quote($$BASEDIR/assets/PageCommentsListView.qml) \
         $$quote($$BASEDIR/assets/PageEditorSheet.qml) \

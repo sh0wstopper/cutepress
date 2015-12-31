@@ -1430,6 +1430,26 @@ void CPUtil::changeActiveBlog(const QString blogUrl)
 	}
 }
 
+void CPUtil::updateBlog(const QString blogUrl,
+        const QString blogUsername,
+        const QString blogPassword,
+        const QString blogHtaccessUsername,
+        const QString blogHtaccessPassword)
+{
+    for(int i=0;i<_blogsModel->size();i++) {
+        QVariantMap item = _blogsModel->value(i).toMap();
+        if(item[blogRoleNames[BlogEntry::UrlRole]].toString()==blogUrl) {
+            item[blogRoleNames[BlogEntry::UsernameRole]] = blogUsername;
+            item[blogRoleNames[BlogEntry::PasswordRole]] = blogPassword;
+            item[blogRoleNames[BlogEntry::HtUsernameRole]] = blogHtaccessUsername;
+            item[blogRoleNames[BlogEntry::HtPasswordRole]] = blogHtaccessPassword;
+            _blogsModel->replace(i, item);
+            updateInBlogsDB(item[blogRoleNames[BlogEntry::UrlRole]].toString(), item);
+            return;
+        }
+    }
+}
+
 void CPUtil::updateBlogsDB()
 {
     QSqlQuery query;
@@ -1507,6 +1527,43 @@ void CPUtil::readBlogsFromDB()
         it[blogRoleNames[BlogEntry::SanitizedUrlRole]] = query.value(15).toString();
 	    _blogsModel->addEntry(it);
     }
+}
+
+void CPUtil::updateInBlogsDB(QString blogUrl, QVariantMap item) {
+    QSqlQuery query;
+    QString queryString;
+    queryString = "UPDATE blogs SET ";
+    queryString += "blogName='"+item[blogRoleNames[BlogEntry::NameRole]].toString()+
+            "', xmlRpcUrl='"+
+            item[blogRoleNames[BlogEntry::XmlRpcUrlRole]].toString()+
+            "', blogId='"+
+            item[blogRoleNames[BlogEntry::IdRole]].toString()+
+            "', htUsername='"+
+            item[blogRoleNames[BlogEntry::HtUsernameRole]].toString()+
+            "', htPassword='"+
+            item[blogRoleNames[BlogEntry::HtPasswordRole]].toString()+
+            "', username='"+
+            item[blogRoleNames[BlogEntry::UsernameRole]].toString()+
+            "', password='"+
+            item[blogRoleNames[BlogEntry::PasswordRole]].toString()+
+            "', isAdmin="+
+            integerValueForBoolean(item[blogRoleNames[BlogEntry::IsAdminRole]].toBool())+
+            ", isWordpress="+
+            integerValueForBoolean(item[blogRoleNames[BlogEntry::IsWordpressRole]].toBool())+
+            ", pagesCount="+
+            item[blogRoleNames[BlogEntry::PagesCountRole]].toString()+
+            ", postsCount="+
+            item[blogRoleNames[BlogEntry::PostsCountRole]].toString()+
+            ", numberOfPosts="+
+            item[blogRoleNames[BlogEntry::NumberOfPostsRole]].toString()+
+            ", commentsCount="+
+            item[blogRoleNames[BlogEntry::CommentsCountRole]].toString()+
+            ", isActive="+
+            integerValueForBoolean(item[blogRoleNames[BlogEntry::IsActiveRole]].toBool())+
+            ", sanitizedUrl='"+
+            item[blogRoleNames[BlogEntry::SanitizedUrlRole]].toString()+
+            "' WHERE blogUrl='"+blogUrl+"';";
+    qDebug()<<"CPUtil---updateInBlogsDB"<<query.exec(queryString)<<query.lastError();
 }
 
 QString CPUtil::integerValueForBoolean(const bool value)

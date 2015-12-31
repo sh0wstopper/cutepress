@@ -210,6 +210,11 @@ public slots:
     void activateBlog(int idx = -1);
     void changeActiveBlog(const int pos);
     void changeActiveBlog(const QString blogUrl);
+    void updateBlog(const QString blogUrl,
+            const QString blogUsername,
+            const QString blogPassword,
+            const QString blogHtaccessUsername,
+            const QString blogHtaccessPassword);
     void createNewPost(QString dateCreated = "",
                        QString title = "",
                        QString description = "",
@@ -375,6 +380,7 @@ signals:
 
 private:
 	void updateBlogsDB();
+    void updateInBlogsDB(QString blogUrl, QVariantMap item);
 	void readBlogsFromDB();
     void deleteBlogTablesInDB(const QString sanitizedBlogUrl);
     void createBlogPagesTable();

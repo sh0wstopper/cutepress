@@ -70,6 +70,7 @@ Tab {
                 },
                 ActionItem {
                     title: qsTr("Refresh active blog")
+                    imageSource: "asset:///images/refresh.png"
                     enabled: cpUtil.blogs.size()>0
                     ActionBar.placement:ActionBarPlacement.InOverflow
                     onTriggered: {        
@@ -204,6 +205,18 @@ Tab {
                                                 onTriggered: {
                                                     if(!ListItemData.blogIsActive)
                                                         rootContainer.ListItem.view.activateBlog(ListItemData.blogUrl);
+                                                }
+                                            },
+                                            ActionItem {
+                                                title: qsTr("Edit")
+                                                imageSource: "asset:///images/edit.png"
+                                                onTriggered: {
+                                                    rootContainer.ListItem.view.openBlogEditorSheet(ListItemData.blogIsWordpress,
+                                                                                                    ListItemData.blogUrl,
+                                                                                                    ListItemData.blogUsername,
+                                                                                                    ListItemData.blogPassword,
+                                                                                                    ListItemData.blogHtaccessUsername,
+                                                                                                    ListItemData.blogHtaccessPassword);
                                                 }
                                             },
                                             InvokeActionItem {

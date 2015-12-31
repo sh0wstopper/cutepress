@@ -4,6 +4,7 @@ AboutPage.qml
 ActivityIndicatorLarge.qml
 ActivityIndicatorMedium.qml
 ActivityIndicatorSmall.qml
+BlogEditorSheet.qml
 BlogListsTab.qml
 BlogsSelectionSheet.qml
 ButtonTitleBar.qml
@@ -64,7 +65,6 @@ ImageSelectionSheet.qml
 main.qml
 MediaEditorSheet.qml
 MediaTab.qml
-NewBlogSheet.qml
 PageCategoriesListView.qml
 PageCommentsListView.qml
 PageEditorSheet.qml

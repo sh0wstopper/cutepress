@@ -25,6 +25,64 @@
     </message>
 </context>
 <context>
+    <name>BlogEditorSheet</name>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="75"/>
+        <source>New blog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="77"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="91"/>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="116"/>
+        <source>Blog details missing!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="168"/>
+        <location filename="../assets/BlogEditorSheet.qml" line="194"/>
+        <source>URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="219"/>
+        <location filename="../assets/BlogEditorSheet.qml" line="223"/>
+        <location filename="../assets/BlogEditorSheet.qml" line="277"/>
+        <source>Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="234"/>
+        <location filename="../assets/BlogEditorSheet.qml" line="238"/>
+        <location filename="../assets/BlogEditorSheet.qml" line="304"/>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="257"/>
+        <source>htaccess Credentials</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="282"/>
+        <source>htaccess Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogEditorSheet.qml" line="309"/>
+        <source>htaccess Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BlogListsTab</name>
     <message>
         <location filename="../assets/BlogListsTab.qml" line="54"/>
@@ -32,27 +90,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="88"/>
+        <location filename="../assets/BlogListsTab.qml" line="89"/>
         <source>Remove blogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="89"/>
+        <location filename="../assets/BlogListsTab.qml" line="90"/>
         <source>Remove all blogs?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="85"/>
+        <location filename="../assets/BlogListsTab.qml" line="86"/>
         <source>Remove all blogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="234"/>
+        <location filename="../assets/BlogListsTab.qml" line="247"/>
         <source>Remove blog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="165"/>
+        <location filename="../assets/BlogListsTab.qml" line="166"/>
         <source>&lt;b&gt;%1&lt;/b&gt; | Admin</source>
         <translation type="unfinished"></translation>
     </message>
@@ -67,48 +125,53 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="104"/>
+        <location filename="../assets/BlogListsTab.qml" line="105"/>
         <source>&lt;b&gt;Currently no blogs added!&lt;/b&gt;
 Add new WordPress.com or self-hosted blog.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="165"/>
+        <location filename="../assets/BlogListsTab.qml" line="166"/>
         <source>&lt;b&gt;%1&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="197"/>
+        <location filename="../assets/BlogListsTab.qml" line="198"/>
         <source>Blog options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="202"/>
+        <location filename="../assets/BlogListsTab.qml" line="203"/>
         <source>Activate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="210"/>
+        <location filename="../assets/BlogListsTab.qml" line="211"/>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/BlogListsTab.qml" line="223"/>
         <source>Share</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="221"/>
+        <location filename="../assets/BlogListsTab.qml" line="234"/>
         <source>Copy link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="226"/>
+        <location filename="../assets/BlogListsTab.qml" line="239"/>
         <source>Open in browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="231"/>
+        <location filename="../assets/BlogListsTab.qml" line="244"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/BlogListsTab.qml" line="235"/>
+        <location filename="../assets/BlogListsTab.qml" line="248"/>
         <source>Remove blog &apos;%1&apos;?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -583,22 +646,22 @@ Add new WordPress.com or self-hosted blog.</source>
 <context>
     <name>CutePressListView</name>
     <message>
-        <location filename="../assets/CutePressListView.qml" line="53"/>
+        <location filename="../assets/CutePressListView.qml" line="65"/>
         <source>Delete comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/CutePressListView.qml" line="54"/>
+        <location filename="../assets/CutePressListView.qml" line="66"/>
         <source>Delete selected comment?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/CutePressListView.qml" line="67"/>
+        <location filename="../assets/CutePressListView.qml" line="79"/>
         <source>Spam comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/CutePressListView.qml" line="68"/>
+        <location filename="../assets/CutePressListView.qml" line="80"/>
         <source>Spam selected comment?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -606,12 +669,12 @@ Add new WordPress.com or self-hosted blog.</source>
 <context>
     <name>CutePressTabbedPane</name>
     <message>
-        <location filename="../assets/CutePressTabbedPane.qml" line="322"/>
+        <location filename="../assets/CutePressTabbedPane.qml" line="336"/>
         <source>Delete post</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/CutePressTabbedPane.qml" line="323"/>
+        <location filename="../assets/CutePressTabbedPane.qml" line="337"/>
         <source>Do you really want to delete post?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -814,64 +877,6 @@ Add new WordPress.com or self-hosted blog.</source>
     <message>
         <location filename="../assets/MediaTab.qml" line="93"/>
         <source>No media items</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>NewBlogSheet</name>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="46"/>
-        <source>New blog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="48"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="62"/>
-        <source>Ok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="67"/>
-        <source>Blog details missing!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="121"/>
-        <location filename="../assets/NewBlogSheet.qml" line="146"/>
-        <source>URL</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="209"/>
-        <source>htaccess Credentials</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="171"/>
-        <location filename="../assets/NewBlogSheet.qml" line="175"/>
-        <location filename="../assets/NewBlogSheet.qml" line="229"/>
-        <source>Username</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="234"/>
-        <source>htaccess Username</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="186"/>
-        <location filename="../assets/NewBlogSheet.qml" line="190"/>
-        <location filename="../assets/NewBlogSheet.qml" line="256"/>
-        <source>Password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/NewBlogSheet.qml" line="261"/>
-        <source>htaccess Password</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1411,97 +1416,97 @@ Add new WordPress.com or self-hosted blog.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="269"/>
-        <location filename="../assets/PostEditorSheet.qml" line="274"/>
+        <location filename="../assets/PostEditorSheet.qml" line="236"/>
+        <location filename="../assets/PostEditorSheet.qml" line="241"/>
         <source>Title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="278"/>
-        <location filename="../assets/PostEditorSheet.qml" line="283"/>
+        <location filename="../assets/PostEditorSheet.qml" line="245"/>
+        <location filename="../assets/PostEditorSheet.qml" line="250"/>
         <source>Slug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="287"/>
+        <location filename="../assets/PostEditorSheet.qml" line="254"/>
         <source>Body</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="292"/>
+        <location filename="../assets/PostEditorSheet.qml" line="259"/>
         <source>Post body</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="316"/>
-        <location filename="../assets/PostEditorSheet.qml" line="321"/>
+        <location filename="../assets/PostEditorSheet.qml" line="283"/>
+        <location filename="../assets/PostEditorSheet.qml" line="288"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="325"/>
+        <location filename="../assets/PostEditorSheet.qml" line="292"/>
         <source>Categories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="391"/>
+        <location filename="../assets/PostEditorSheet.qml" line="340"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="394"/>
+        <location filename="../assets/PostEditorSheet.qml" line="343"/>
         <source>Publish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="399"/>
+        <location filename="../assets/PostEditorSheet.qml" line="348"/>
         <source>Private</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="403"/>
+        <location filename="../assets/PostEditorSheet.qml" line="352"/>
         <source>Draft</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="407"/>
+        <location filename="../assets/PostEditorSheet.qml" line="356"/>
         <source>Pending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="411"/>
+        <location filename="../assets/PostEditorSheet.qml" line="360"/>
         <source>Local draft</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="417"/>
-        <location filename="../assets/PostEditorSheet.qml" line="422"/>
+        <location filename="../assets/PostEditorSheet.qml" line="366"/>
+        <location filename="../assets/PostEditorSheet.qml" line="371"/>
         <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="427"/>
+        <location filename="../assets/PostEditorSheet.qml" line="376"/>
         <source>Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="435"/>
-        <location filename="../assets/PostEditorSheet.qml" line="440"/>
+        <location filename="../assets/PostEditorSheet.qml" line="384"/>
+        <location filename="../assets/PostEditorSheet.qml" line="389"/>
         <source>Excerpt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="450"/>
+        <location filename="../assets/PostEditorSheet.qml" line="399"/>
         <source>Sticky</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="466"/>
+        <location filename="../assets/PostEditorSheet.qml" line="415"/>
         <source>Comments open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/PostEditorSheet.qml" line="482"/>
+        <location filename="../assets/PostEditorSheet.qml" line="431"/>
         <source>Pings open</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1753,52 +1758,52 @@ Add new WordPress.com or self-hosted blog.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="128"/>
+        <location filename="../assets/main.qml" line="76"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="142"/>
+        <location filename="../assets/main.qml" line="90"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="205"/>
+        <location filename="../assets/main.qml" line="153"/>
         <source>Posts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="199"/>
+        <location filename="../assets/main.qml" line="147"/>
         <source>Pages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="156"/>
+        <location filename="../assets/main.qml" line="104"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="170"/>
+        <location filename="../assets/main.qml" line="118"/>
         <source>Donate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="193"/>
+        <location filename="../assets/main.qml" line="141"/>
         <source>Blogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="211"/>
+        <location filename="../assets/main.qml" line="159"/>
         <source>Comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="217"/>
+        <location filename="../assets/main.qml" line="165"/>
         <source>Media</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="223"/>
+        <location filename="../assets/main.qml" line="171"/>
         <source>Categories</source>
         <translation type="unfinished"></translation>
     </message>

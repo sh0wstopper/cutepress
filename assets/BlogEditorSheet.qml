@@ -24,11 +24,40 @@ import "UIConstants.js" as UI
 
 CutePressSheet {
     id: iSheet
+    property bool isEditing: false
+    property string editBlogUrl: ""
     property int iState: cpUtil.blogAdditionState
     property string tempBlogUrl: ""
     property string tempBlogRPCUrl: ""
     property string tempBlogUsername: ""
     property string tempBlogPassword: ""
+    function setEditDetails(blogIsWordPress,
+        blogUrl,
+        blogUsername,
+        blogPassword,
+        blogHtUsername,
+        blogHtPassword) {
+            isEditing = true;
+            if(!blogIsWordPress)
+                blogSegment.selectedIndex = 1;
+            editBlogUrl = blogUrl;
+            var iUrl = blogUrl.toString();
+            if(iUrl.toLowerCase().indexOf("http://") >= 0) {
+                blogUrl = iUrl.replace("http://", "");
+                schemeSelector.selectedIndex = 0;
+            }
+            if(iUrl.toLowerCase().indexOf("https://") >= 0) {
+                blogUrl = iUrl.replace("https://", "");
+                schemeSelector.selectedIndex = 1;
+            }
+            blogAddressInput.text = blogUrl;
+            blogUsernameInput.text = blogUsername;
+            blogPasswordInput.text = blogPassword;
+            if(blogHtUsername!="" || blogHtPassword!="")
+                htaccessCheck.checked = true;
+            htUsernameInput.text = blogHtUsername
+            htPasswordInput.text = blogHtPassword;
+        }
     onIStateChanged: {
         if(iState==UI.ProgressState.Success) {
         	iSheet.close()
@@ -61,33 +90,51 @@ CutePressSheet {
             acceptAction: ActionItem {
                 title: qsTr("Ok")
                 enabled: iState!=UI.ProgressState.Processing
-                onTriggered: {      
-                    cpManager.blogRPCUrl = "";
-                    if(blogAddressInput.text=="" || blogUsernameInput.text=="" || blogPasswordInput.text=="") {
-                        mainWindow.showInfoBanner(qsTr("Blog details missing!"))           
-                        return
-                    }
-                    if(blogSegment.selectedIndex==0) {
-                        cpManager.blogUrl = schemeSelector.selectedValue+blogAddressInput.text.toLowerCase()+".wordpress.com"
-	                    cpManager.blogUsername = blogUsernameInput.text
-	                    cpManager.blogPassword = blogPasswordInput.text
-	                    cpUtil.getBlogs()
-                    } else {
-                        cpManager.blogUrl = schemeSelector.selectedValue+blogAddressInput.text
-                        if(htaccessCheck.checked) {
-                            if(htUsernameInput.text!="") {
-                                cpManager.blogHtAccessUsername = htUsernameInput.text
-                            } else 
-                                return
-                            if(htPasswordInput.text!="") {
-                                cpManager.blogHtAccessPassword = htPasswordInput.text
-                            }
-                            else
-                                return
+                onTriggered: {
+                    if(iSheet.isEditing) {
+                        cpUtil.updateBlog(editBlogUrl,
+                            blogUsernameInput.text,
+                            blogPasswordInput.text,
+                            htUsernameInput.text,
+                            htPasswordInput.text);
+                        iSheet.close();
+                        if(cpManager.blogUrl = editBlogUrl) {//isActive  
+                            cpManager.blogUsername = blogUsernameInput.text;
+                            cpManager.blogPassword = blogPasswordInput.text;                        
+                            cpManager.blogHtAccessUsername = htUsernameInput.text;
+                            cpManager.blogHtAccessPassword = htPasswordInput.text;                      
+                            cpUtil.fetchRecentPosts();
+                            cpUtil.fetchPages();
+                            cpUtil.fetchComments();
+                            cpUtil.fetchMediaItems();
+                            cpUtil.fetchTags();
+                            cpUtil.fetchCategories();
                         }
-                        cpManager.blogUsername = blogUsernameInput.text
-                        cpManager.blogPassword = blogPasswordInput.text
-                        cpUtil.getBlogs()
+                    } else {
+                        cpManager.blogRPCUrl = "";
+                        if(blogAddressInput.text=="" || blogUsernameInput.text=="" || blogPasswordInput.text=="") {
+                            mainWindow.showInfoBanner(qsTr("Blog details missing!"))           
+                            return
+                        }
+                        if(blogSegment.selectedIndex==0) {
+                            cpManager.blogUrl = schemeSelector.selectedValue+blogAddressInput.text.toLowerCase()+".wordpress.com"
+    	                    cpManager.blogUsername = blogUsernameInput.text
+    	                    cpManager.blogPassword = blogPasswordInput.text
+    	                    cpUtil.getBlogs()
+                        } else {
+                            cpManager.blogUrl = schemeSelector.selectedValue+blogAddressInput.text
+                            if(htaccessCheck.checked) {
+                                if(htUsernameInput.text!="") {
+                                    cpManager.blogHtAccessUsername = htUsernameInput.text
+                                }
+                                if(htPasswordInput.text!="") {
+                                    cpManager.blogHtAccessPassword = htPasswordInput.text
+                                }
+                            }
+                            cpManager.blogUsername = blogUsernameInput.text
+                            cpManager.blogPassword = blogPasswordInput.text
+                            cpUtil.getBlogs()
+                        }
                     }
                 }
             } // ActionItem
@@ -143,6 +190,7 @@ CutePressSheet {
                         }      
     		            TextField {
     		                id: blogAddressInput
+    		                enabled: !iSheet.isEditing
                             hintText: qsTr("URL")
                             validator: Validator {
                                 mode: ValidationMode.FocusLost
